@@ -17,6 +17,8 @@ const TopBarSideBar = ({
   showLanguageChange,
   linkData,
   islinkDataLoading,
+  toggleSidebarWidth,
+  isSidebarCollapsed
 }) => {
   const [isSidebarOpen, toggleSidebar] = useState(false);
   const [isSideBarScroll, setSideBarScrollTop] = useState(false);
@@ -58,6 +60,8 @@ const TopBarSideBar = ({
         handleUserDropdownSelection={handleUserDropdownSelection}
         logoUrl={logoUrl}
         showLanguageChange={showLanguageChange}
+        toggleSidebarWidth={toggleSidebarWidth}
+        isSidebarCollapsed={isSidebarCollapsed}
       />
       {showDialog && (
         <LogoutDialog onSelect={handleOnSubmit} onCancel={handleOnCancel} onDismiss={handleOnCancel}></LogoutDialog>
